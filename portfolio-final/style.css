@@ -114,9 +114,9 @@ a:hover {
   transform: rotate(0)
 }
 
-/* #toggle {
+#toggle {
   display: none;
-} */
+}
 
 /* MENU */
 
@@ -127,10 +127,10 @@ a:hover {
   background: transparent;
   height: 40px;
   width: 40px;
-  border-radius: 50%;
+  border-radius: 60%;
   box-shadow: 0px 0px 0px 0px #FFFFFF;
   z-index: -1;
-  transition: 400ms ease-in-out 0;
+  transition: 400ms ease-in-out;
 }
 
 .menu-items {
@@ -138,22 +138,22 @@ a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
-  transition: 400ms ease-in-out 0;
+  transition: 400ms ease-in-out;
 }
 
 .menu-items ul {
   list-style-type: none;
 }
 
-.menu-items ul li {
-  margin: 10px;
+.menu-items ul li a {
+  margin: 10px 0;
   color: #9D0050;
   text-decoration: none;
   text-transform: uppercase;
@@ -180,4 +180,20 @@ a:hover {
   transform: rotate(-45deg);
   background-color: #9D0050;
   top: 48px;
+}
+
+/* MENU BUBBLE ANIMATION */
+
+#toggle:checked+.checkbox {
+  background-color: #FFFFFF;
+}
+
+#toggle:checked~.menu {
+  box-shadow: 0px 0px 0px 100vmax #FFFFFF;
+  z-index: 1;
+}
+
+#toggle:checked~.menu-items {
+  visibility: visible;
+  opacity: 1;
 }
