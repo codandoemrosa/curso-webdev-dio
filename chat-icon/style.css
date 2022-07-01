@@ -25,8 +25,7 @@ body {
   align-items: center;
   position: relative;
   transform: translateY(0);
-
-  /*animation: ; */
+  animation: chatTranslate 2s ease-in-out infinite;
 }
 
 .chatbot::before {
@@ -47,5 +46,20 @@ body {
   border-radius: 50%;
   background-color: #949494;
   transform: scale(1);
+
+}
+
+@keyframes chatTranslate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 
 }
