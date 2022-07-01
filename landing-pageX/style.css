@@ -10,14 +10,18 @@ body {
 .wrapper {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(360deg, #9D0050, #EB5E9A, #FD838D);
+  background: linear-gradient(-45deg, #9D0050, #EB5E9A, #FD838D);
   background-size: 400% 400%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  /* animation properties */
+  /*  animation properties
+  animation: name duration timing-function delay iteration-count direction fill-mode;  */
+
+  animation: backgroundTransition 8s ease-in-out infinite;
+
 
 }
 
@@ -52,4 +56,18 @@ a {
 a:hover {
   color: #9D0050;
   background-color: white;
+}
+
+@keyframes backgroundTransition {
+  0% {
+    background-position: 0% 80%;
+  }
+
+  50% {
+    background-position: 80% 100%;
+  }
+
+  100% {
+    background-position: 0% 90%;
+  }
 }
