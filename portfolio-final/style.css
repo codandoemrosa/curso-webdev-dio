@@ -207,11 +207,10 @@ a:hover {
   width: 100%;
   height: auto;
   display: flex;
-  padding: 3rem 0;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0 3rem;
+  margin: 3rem 0;
   background-color: #FFFFFF;
 }
 
@@ -225,10 +224,10 @@ a:hover {
 .card {
   height: 300px;
   width: 400px;
-  margin: 0 3rem;
-  background-image: url(https://i.pinimg.com/736x/4b/de/24/4bde24be4c0fb0470d9b4cb7948ad489.jpg);
+  margin: 3rem 0 0 0;
+  background-image: url(https://static.vecteezy.com/system/resources/previews/005/261/559/non_2x/strawberry-cartoons-pattern-design-sweet-pink-background-the-seamless-cute-vibrant-pattern-in-a-girl-or-baby-fashion-fresh-and-juicy-colorful-strawberry-fruit-in-summer-design-for-fashion-vector.jpg);
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: space;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -237,13 +236,23 @@ a:hover {
   color: #FFFFFF;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 10%;
 }
 
 .card-text {
   width: 40%;
   font-family: sans-serif;
   letter-spacing: 1px;
-  color: rgb(135, 81, 0);
+  color: #9D0050;
+}
+
+.card-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .card-wrapper::before {
@@ -252,7 +261,34 @@ a:hover {
   height: 100px;
   width: 100px;
   display: block;
-  border: 1px solid #FFFFFF;
+  border: 1px solid rgb(135, 81, 0);
   opacity: 0;
   transition: 0.3s;
+}
+
+.card-wrapper h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+  transition: 0.3s;
+}
+
+.card-wrapper p {
+  font-size: 0;
+  visibility: hidden;
+  opacity: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.card:hover {
+  filter: unset;
+}
+
+.card:hover>.card-wrapper::before {
+  height: 250px;
+  width: 350px;
+  opacity: 1;
 }
