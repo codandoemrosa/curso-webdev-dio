@@ -129,6 +129,7 @@ a:hover {
   width: 40px;
   box-shadow: 0px 0px 0px 0px #FFFFFF;
   border-radius: 50%;
+
   z-index: -1;
   transition: 400ms ease-in-out 0s;
 }
@@ -198,4 +199,60 @@ a:hover {
 
 .menu-items a:hover {
   color: #EB5E9A;
+}
+
+/* CARDS */
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 3rem 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem;
+  background-color: #FFFFFF;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.card {
+  height: 300px;
+  width: 400px;
+  margin: 0 3rem;
+  background-image: url(https://i.pinimg.com/736x/4b/de/24/4bde24be4c0fb0470d9b4cb7948ad489.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(0.5);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-text {
+  width: 40%;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  color: rgb(135, 81, 0);
+}
+
+.card-wrapper::before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  display: block;
+  border: 1px solid #FFFFFF;
+  opacity: 0;
+  transition: 0.3s;
 }
